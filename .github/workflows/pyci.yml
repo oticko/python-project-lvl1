@@ -25,4 +25,4 @@ jobs:
       - name: Run linter
         run: |
           poetry add --dev flake8
-          make lint
+          poetry run flake8 brain_games
