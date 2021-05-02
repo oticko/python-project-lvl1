@@ -1,9 +1,6 @@
 install:
 	poetry install
 
-brain-games:
-	poetry run brain-games
-
 build:
 	poetry build
 
@@ -13,7 +10,7 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 
-package-unnstall:
+package-uninstall:
 	python3 -m pip uninstall dist/*.whl
 
 lint:
