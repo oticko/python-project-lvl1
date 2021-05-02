@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install poetry
-          poetry install
+          make install
       - name: Run linter
         run: |          
           poetry add --dev flake8
