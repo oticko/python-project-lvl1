@@ -1,6 +1,6 @@
 [[package]]
 name = "flake8"
-version = "^3.9.1"
+version = "3.9.1"
 description = "the modular source code checker: pep8 pyflakes and co"
 category = "main"
 optional = false
