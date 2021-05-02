@@ -20,6 +20,7 @@ jobs:
         # make depends on poetry
       - name: Install dependencies
         run: |
+          pip install poetry
           make install
           poetry add --dev flake8
       - name: Run linter
