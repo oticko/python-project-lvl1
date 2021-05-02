@@ -24,4 +24,5 @@ jobs:
           poetry install
       - name: Run linter
         run: |          
+          poetry add --dev flake8
           make lint
