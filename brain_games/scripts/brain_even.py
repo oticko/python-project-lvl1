@@ -1,4 +1,5 @@
-import prompt, random
+import prompt
+import random
 
 
 def is_number_even(number):
@@ -15,10 +16,10 @@ def asking_question():
         answer = prompt.string('Your answer: ')
         if answer == is_number_even(random_number):
             print('Correct!')
-            counter +=1
-            print(counter)
+            counter += 1
         else:
-            print('{} is wrong answer ;(. Correct answer was {}'.format(answer, is_number_even(random_number)))
+            (print('{} is wrong answer ;(. Correct answer was {}'.
+                   format(answer, is_number_even(random_number))))
             return False
     return True
 
