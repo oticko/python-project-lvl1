@@ -23,6 +23,7 @@ jobs:
           pip install poetry
           poetry install
           poetry add --dev flake8
+          flake8 --version
       - name: Run linter
         run: |          
           make lint
