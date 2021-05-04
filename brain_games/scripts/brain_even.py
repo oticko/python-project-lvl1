@@ -1,5 +1,7 @@
 import prompt
 import random
+import counter_answer
+import welcome_speech
 
 
 def is_number_even(number):
@@ -9,30 +11,17 @@ def is_number_even(number):
 
 
 def asking_question():
-    counter = 0
-    while counter < 3:
-        random_number = random.randint(1, 100)
-        print('Question: {}'.format(random_number))
-        answer = prompt.string('Your answer: ')
-        if answer == is_number_even(random_number):
-            print('Correct!')
-            counter += 1
-        else:
-            (print('{} is wrong answer ;(. Correct answer was {}'.
-                   format(answer, is_number_even(random_number))))
-            return False
-    return True
+    random_number = random.randint(1, 100)
+    print('Question: {}'.format(random_number))
+    answer = prompt.string('Your answer: ')
+    if answer == is_number_even(random_number):
+        return True
+    return is_number_even(random_number), answer
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(name))
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    if asking_question() is True:
-        print('Congratulations, {}!'.format(name))
-    else:
-        print("Let's try again, {}!".format(name))
+    name = welcome_speech.welcome_speech()
+    counter_answer.counter(asking_question, name)
 
 
 if __name__ == '__main__':
