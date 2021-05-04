@@ -21,7 +21,7 @@ def random_calc():
     user_answer = prompt.string('Your answer: ')
     if str(answer) == user_answer:
         return True
-    return answer, user_answer
+    return str(answer), user_answer
 
 
 def main():
