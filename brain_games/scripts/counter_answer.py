@@ -10,7 +10,7 @@ def counter(question, name):
     if count == 3:
         print('Congratulations, {}!'.format(name))
     else:
-        (print('{} is wrong answer ;(. Correct answer was {}'.
+        (print('{!r} is wrong answer ;(. Correct answer was {!r}'.
                format(result[1], result[0])))
         print("Let's try again, {}!".format(name))
 
