@@ -3,6 +3,7 @@ def counter(question, name):
     while count < 3:
         result = question()
         if result is True:
+            print('Correct!')
             count += 1
         else:
             break
