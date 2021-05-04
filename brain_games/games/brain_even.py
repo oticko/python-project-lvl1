@@ -21,6 +21,7 @@ def asking_question():
 
 def main():
     name = welcome_speech.welcome_speech()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     counter_answer.counter(asking_question, name)
 
 
