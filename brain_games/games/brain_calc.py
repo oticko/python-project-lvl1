@@ -10,7 +10,7 @@ def random_calc():
     numb_sum = first_random_numb + second_random_numb
     numb_diff = first_random_numb - second_random_numb
     numb_multi = first_random_numb * second_random_numb
-    answer = random.choice([numb_sum, numb_diff, numb_multi])    
+    answer = random.choice([numb_sum, numb_diff, numb_multi])
     if answer == numb_sum:
         operation = '+'
     elif answer == numb_diff:
