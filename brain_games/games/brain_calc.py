@@ -5,8 +5,8 @@ from brain_games.scripts import welcome_speech
 
 
 def random_calc():
-    first_random_numb = random.randint(1, 100)
-    second_random_numb = random.randint(1, 100)
+    first_random_numb = random.randint(0, 100)
+    second_random_numb = random.randint(0, 100)
     numb_sum = first_random_numb + second_random_numb
     numb_diff = first_random_numb - second_random_numb
     numb_multi = first_random_numb * second_random_numb
