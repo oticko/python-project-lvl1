@@ -1,7 +1,7 @@
 import prompt
 import random
-import counter_answer
-import welcome_speech
+from brain_games.scripts import counter_answer
+from brain_games.scripts import welcome_speech
 
 
 def gcd():
