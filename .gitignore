@@ -3,3 +3,4 @@ brain_games/scripts/__pycache__/
 dist/
 poetry.lock
 .idea/
+exit
