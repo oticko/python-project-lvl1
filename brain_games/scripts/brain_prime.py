@@ -5,9 +5,9 @@ from brain_games.scripts import welcome_speech
 
 
 def is_number_prime():
-    number = random.randint(1, 150)
+    number = random.randint(2, 3572)
     correct_answer = "yes"
-    if number > 2 and number % 2 == 0:
+    if number != 2 and number % 2 == 0:
         correct_answer = "no"
     else:
         divider = 3
