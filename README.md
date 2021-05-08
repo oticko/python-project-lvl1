@@ -3,10 +3,12 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 [![Github Actions Status](https://github.com/oticko/python-project-lvl1/workflows/Python%20CI/badge.svg)](https://github.com/oticko/python-project-lvl1/actions)
 
-https://asciinema.org/a/46luNVSSC5J3GSQYIehkmcRwB
+brain-even: https://asciinema.org/a/my6XRxD55Rv1S824fFJ79lAdg
 
-https://asciinema.org/a/377miVLCmpN6W66J9CcjVQC7z
+brain-calc: https://asciinema.org/a/0HfYhXY0DHSEEPakeLEXgNMdf
 
-https://asciinema.org/a/JA2oaNzJVT1YA5xb66vXHb0G9
+brain_gcd: https://asciinema.org/a/Ja4mxeavv4tq85JGsH0FimK7f
 
-https://asciinema.org/a/OK10QyEnMZTHsumGc9K7rN9dz
+brain_progression: https://asciinema.org/a/37NXjeC0CgKDJmxmBbn9bLifz
+
+brain_prime: https://asciinema.org/a/Pse8NgCl0Bkzh3EL49IuBTbdc
