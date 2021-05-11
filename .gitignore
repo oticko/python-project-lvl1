@@ -1,5 +1,5 @@
 .venv/
-brain_games/scripts/__pycache__/
+__pycache__/
 dist/
 poetry.lock
 .idea/
