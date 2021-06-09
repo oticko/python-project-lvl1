@@ -15,9 +15,8 @@ def counter(game, games_question):
     number_of_rounds = 3
     while current_round < number_of_rounds:
         game_results = game()
-        correct_answer = game_results[0]
-        problem = game_results[1]
-        correct_answer = str(correct_answer)
+        problem = game_results[0]
+        correct_answer = str(game_results[1])
         print('Question: ', *problem)
         user_answer = prompt.string('Your answer: ')
         if correct_answer != user_answer:
