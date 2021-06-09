@@ -1,28 +1,19 @@
-import prompt
 import random
-from brain_games.scripts import counter_answer
-from brain_games.scripts import welcome_speech
+from brain_games.games import games_engine
 
 
-def is_number_even(number):
-    if int(number) % 2 == 0:
-        return 'yes'
-    return 'no'
+def is_number_even():
+    min_problems_number, max_problems_number = 1, 100
+    problems_number = random.randint(min_problems_number, max_problems_number)
+    correct_answer = 'yes' if int(problems_number) % 2 == 0 else 'no'
+    return [problems_number], correct_answer
 
 
-def asking_question():
-    random_number = random.randint(1, 100)
-    print('Question: {}'.format(random_number))
-    answer = prompt.string('Your answer: ')
-    if answer == is_number_even(random_number):
-        return True
-    return is_number_even(random_number), answer
+games_question = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def main():
-    name = welcome_speech.welcome_speech()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    counter_answer.counter(asking_question, name)
+    games_engine.handler(is_number_even, games_question)
 
 
 if __name__ == '__main__':
