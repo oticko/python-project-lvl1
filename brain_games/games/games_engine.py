@@ -9,7 +9,7 @@ def welcome_speech(games_question):
     return name
 
 
-def counter(game, games_question):
+def handler(game, games_question):
     name = welcome_speech(games_question)
     current_round = 0
     number_of_rounds = 3
@@ -31,7 +31,7 @@ def counter(game, games_question):
 
 
 def main():
-    counter()
+    handler()
 
 
 if __name__ == '__main__':
