@@ -17,7 +17,7 @@ def handler(game, games_question):
         game_results = game()
         problem = game_results[0]
         correct_answer = str(game_results[1])
-        print('Question: ', *problem)
+        print('Question:', *problem)
         user_answer = prompt.string('Your answer: ')
         if correct_answer != user_answer:
             (print('{!r} is wrong answer ;(. Correct answer was {!r}.'.
