@@ -1,33 +1,27 @@
-import prompt
 import random
-from brain_games.scripts import counter_answer
-from brain_games.scripts import welcome_speech
+from brain_games.games import games_engine
 
 
 def random_calc():
-    first_random_numb = random.randint(0, 100)
-    second_random_numb = random.randint(0, 100)
-    numb_sum = first_random_numb + second_random_numb
-    numb_diff = first_random_numb - second_random_numb
-    numb_multi = first_random_numb * second_random_numb
-    answer = random.choice([numb_sum, numb_diff, numb_multi])
-    if answer == numb_sum:
-        operation = '+'
-    elif answer == numb_diff:
-        operation = '-'
-    else:
-        operation = '*'
-    print('Question:', first_random_numb, operation, second_random_numb)
-    user_answer = prompt.string('Your answer: ')
-    if str(answer) == user_answer:
-        return True
-    return str(answer), user_answer
+    min_problem_numb, max_problem_numb = 0, 100
+    first_problem_numb = random.randint(min_problem_numb, max_problem_numb)
+    second_problem_numb = random.randint(min_problem_numb, max_problem_numb)
+    numb_sum, numb_diff, numb_multi = '+', '-', '*'
+    operation = random.choice([numb_sum, numb_diff, numb_multi])
+    problem = [first_problem_numb, operation, second_problem_numb]
+    correct_answer = first_problem_numb + second_problem_numb
+    if operation == numb_diff:
+        correct_answer = first_problem_numb - second_problem_numb
+    elif operation == numb_multi:
+        correct_answer = first_problem_numb * second_problem_numb
+    return problem, correct_answer
+
+
+games_question = 'What is the result of the expression?'
 
 
 def main():
-    name = welcome_speech.welcome_speech()
-    print('What is the result of the expression?')
-    counter_answer.counter(random_calc, name)
+    games_engine.handler(random_calc, games_question)
 
 
 if __name__ == '__main__':
