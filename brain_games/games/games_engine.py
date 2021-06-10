@@ -20,7 +20,7 @@ def handler(game, games_question):
         print('Question: ', *problem)
         user_answer = prompt.string('Your answer: ')
         if correct_answer != user_answer:
-            (print('{!r} is wrong answer ;(. Correct answer was {!r}'.
+            (print('{!r} is wrong answer ;(. Correct answer was {!r}.'.
                    format(user_answer, correct_answer)))
             print("Let's try again, {}!".format(name))
             break

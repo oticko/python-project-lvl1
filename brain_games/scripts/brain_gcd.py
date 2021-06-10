@@ -1,31 +1,28 @@
-import prompt
 import random
-from brain_games.scripts import counter_answer
-from brain_games.scripts import welcome_speech
+from brain_games.games import games_engine
 
 
 def gcd():
-    first_rand_numb = random.randint(0, 100)
-    sec_rand_numb = random.randint(0, 100)
-    print('Question:', first_rand_numb, sec_rand_numb)
-    user_answer = prompt.string('Your answer: ')
-    if first_rand_numb == 0 or sec_rand_numb == 0:
-        first_rand_numb = first_rand_numb + sec_rand_numb
-    else:
-        while first_rand_numb != sec_rand_numb:
-            if first_rand_numb > sec_rand_numb:
-                first_rand_numb = first_rand_numb - sec_rand_numb
-            else:
-                sec_rand_numb = sec_rand_numb - first_rand_numb
-    if str(first_rand_numb) == user_answer:
-        return True
-    return str(first_rand_numb), user_answer
+    min_problems_number, max_problems_number = 0, 100
+    first_problems_number = random.randint(min_problems_number, max_problems_number)
+    second_problems_number = random.randint(min_problems_number, max_problems_number)
+    problem = [first_problems_number, second_problems_number]
+    if first_problems_number == 0 or second_problems_number == 0:
+        first_problems_number = first_problems_number + second_problems_number
+        return problem, first_problems_number
+    while first_problems_number != second_problems_number:
+        if first_problems_number > second_problems_number:
+            first_problems_number = first_problems_number - second_problems_number
+        else:
+            second_problems_number = second_problems_number - first_problems_number
+    return problem, first_problems_number
+
+
+games_question = 'Find the greatest common divisor of given numbers.'
 
 
 def main():
-    name = welcome_speech.welcome_speech()
-    print('Find the greatest common divisor of given numbers.')
-    counter_answer.counter(gcd, name)
+    games_engine.handler(gcd, games_question)
 
 
 if __name__ == '__main__':

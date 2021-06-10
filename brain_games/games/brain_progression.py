@@ -26,7 +26,7 @@ def find_progression_elem():
 games_question = 'What number is missing in the progression?'
 
 
-def main():    
+def main():
     games_engine.handler(find_progression_elem, games_question)
 
 
