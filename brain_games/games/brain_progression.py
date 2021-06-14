@@ -1,5 +1,5 @@
 import random
-from brain_games.games import games_engine
+from brain_games.engine import games_engine
 MIN_PROGRESSION_LEN, MAX_PROGRESSION_LEN = 5, 10
 MIN_PROGRESSION_ELEMENT, MAX_PROGRESSION_ELEMENT = 0, 100
 MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP = 1, 10

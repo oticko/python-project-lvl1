@@ -1,5 +1,5 @@
 import random
-from brain_games.games import games_engine
+from brain_games.engine import games_engine
 MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB = 2, 3572
 
 
