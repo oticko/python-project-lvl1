@@ -1,19 +1,21 @@
 import random
-from brain_games.games import games_engine
+MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB = 1, 100
+GAMES_QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def is_number_even():
-    min_problems_number, max_problems_number = 1, 100
-    problems_number = random.randint(min_problems_number, max_problems_number)
-    correct_answer = 'yes' if int(problems_number) % 2 == 0 else 'no'
-    return [problems_number], correct_answer
+def is_number_even(number):
+    return 'yes' if number % 2 == 0 else 'no'
 
-
-games_question = 'Answer "yes" if the number is even, otherwise answer "no".'
+    
+def problems_maker():
+    problems_number = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
+    correct_answer = is_number_even(problems_number)
+    return problems_number, correct_answer
 
 
 def main():
-    games_engine.handler(is_number_even, games_question)
+    GAMES_QUESTION
+    problems_maker()
 
 
 if __name__ == '__main__':

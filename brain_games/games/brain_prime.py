@@ -1,18 +1,18 @@
 import random
 from brain_games.games import games_engine
+MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB = 2, 3572
 
 
 def is_number_prime():
-    min_problems_number, max_problems_number = 2, 3572
-    problems_number = random.randint(min_problems_number, max_problems_number)
+    problems_number = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
     correct_answer = "yes"
-    if problems_number != 2 and problems_number % 2 == 0:
+    if problems_number != 2 and problems_number % 2 == 0 or problems_number < 2:
         correct_answer = "no"
     for divider in range(3, problems_number - 1, 2):
         if problems_number % divider == 0:
             correct_answer = "no"
             break
-    return [problems_number], correct_answer
+    return problems_number, correct_answer
 
 
 games_question = 'Answer "yes" if given number is prime. Otherwise answer "no".'

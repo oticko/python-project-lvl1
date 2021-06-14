@@ -1,16 +1,18 @@
 import random
 from brain_games.games import games_engine
+MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB = 0, 100
 
 
 def random_calc():
-    min_problem_numb, max_problem_numb = 0, 100
-    first_problem_numb = random.randint(min_problem_numb, max_problem_numb)
-    second_problem_numb = random.randint(min_problem_numb, max_problem_numb)
+    first_problem_numb = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
+    second_problem_numb = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
     numb_sum, numb_diff, numb_multi = '+', '-', '*'
     operation = random.choice([numb_sum, numb_diff, numb_multi])
-    problem = [first_problem_numb, operation, second_problem_numb]
-    correct_answer = first_problem_numb + second_problem_numb
-    if operation == numb_diff:
+    problem = ("{} {} {}".format(first_problem_numb,
+                                 operation, second_problem_numb))
+    if operation == numb_sum:
+        correct_answer = first_problem_numb + second_problem_numb
+    elif operation == numb_diff:
         correct_answer = first_problem_numb - second_problem_numb
     elif operation == numb_multi:
         correct_answer = first_problem_numb * second_problem_numb

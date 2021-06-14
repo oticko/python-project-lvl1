@@ -1,12 +1,12 @@
 import random
 from brain_games.games import games_engine
+MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB = 0, 100
 
 
 def gcd():
-    min_problem_numb, max_problem_numb = 0, 100
-    first_problem_numb = random.randint(min_problem_numb, max_problem_numb)
-    second_problem_numb = random.randint(min_problem_numb, max_problem_numb)
-    problem = [first_problem_numb, second_problem_numb]
+    first_problem_numb = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
+    second_problem_numb = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
+    problem = ("{} {}". format(first_problem_numb, second_problem_numb))
     if first_problem_numb == 0 or second_problem_numb == 0:
         first_problem_numb = first_problem_numb + second_problem_numb
         return problem, first_problem_numb
