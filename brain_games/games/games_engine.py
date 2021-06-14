@@ -14,12 +14,10 @@ def handler(game, games_question):
     current_round = 0
     number_of_rounds = 3
     while current_round < number_of_rounds:
-        game_results = game()
-        problem = game_results[0]
-        correct_answer = str(game_results[1])
+        problem, correct_answer = game()
         print('Question:', *problem)
         user_answer = prompt.string('Your answer: ')
-        if correct_answer != user_answer:
+        if str(correct_answer) != user_answer:
             (print('{!r} is wrong answer ;(. Correct answer was {!r}.'.
                    format(user_answer, correct_answer)))
             print("Let's try again, {}!".format(name))
