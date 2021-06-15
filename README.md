@@ -1,3 +1,9 @@
+
+## Hexlet tests and linter status: ##
+[![Actions Status](https://github.com/oticko/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/oticko/python-project-lvl1/actions)
+<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+[![Github Actions Status](https://github.com/oticko/python-project-lvl1/workflows/Python%20CI/badge.svg)](https://github.com/oticko/python-project-lvl1/actions)
+
 # Hello and welcome to Brain Games! #
 
 Here you can find an installation guide and a description of each game.
@@ -65,7 +71,3 @@ In this game, you get a random number and you have to answer if the number is pr
 
 [An example of a brain-prime game](https://asciinema.org/a/CdIe8WXPQKDGXcRdWQcSaVxOB).
 
-## Hexlet tests and linter status: ##
-[![Actions Status](https://github.com/oticko/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/oticko/python-project-lvl1/actions)
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-[![Github Actions Status](https://github.com/oticko/python-project-lvl1/workflows/Python%20CI/badge.svg)](https://github.com/oticko/python-project-lvl1/actions)
