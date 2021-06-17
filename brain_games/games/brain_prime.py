@@ -14,7 +14,7 @@ def is_number_prime(number):
     return True
 
 
-def make_problem_with_solve():
+def make_problem_with_solution():
     problem = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
     correct_answer = 'no'
     if is_number_prime(problem):

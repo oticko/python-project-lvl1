@@ -5,7 +5,7 @@ MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB = 0, 100
 GAMES_QUESTION = 'Find the greatest common divisor of given numbers.'
 
 
-def gcd_finder(first_number, second_number):
+def find_gcd(first_number, second_number):
     if first_number == 0 or second_number == 0:
         first_number = first_number + second_number
         return first_number
@@ -17,9 +17,9 @@ def gcd_finder(first_number, second_number):
     return first_number
 
 
-def make_problem_with_solve():
+def make_problem_with_solution():
     first_problem_numb = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
     second_problem_numb = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
     problem = ("{} {}". format(first_problem_numb, second_problem_numb))
-    correct_answer = gcd_finder(first_problem_numb, second_problem_numb)
+    correct_answer = find_gcd(first_problem_numb, second_problem_numb)
     return problem, correct_answer

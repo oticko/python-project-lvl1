@@ -12,10 +12,12 @@ def calc(first_numb, operation, second_numb):
         result = first_numb - second_numb
     elif operation == '*':
         result = first_numb * second_numb
+    else:
+        return 'Unknown operation'
     return result
 
 
-def make_problem_with_solve():
+def make_problem_with_solution():
     first_problem_numb = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
     second_problem_numb = random.randint(MIN_PROBLEM_NUMB, MAX_PROBLEM_NUMB)
     operation = random.choice(['+', '-', '*'])
