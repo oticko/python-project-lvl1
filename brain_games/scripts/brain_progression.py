@@ -3,7 +3,7 @@ from brain_games.games import brain_progression
 
 
 def main():
-    games_engine.handler(brain_progression.make_problem_with_solve,
+    games_engine.play_game(brain_progression.make_problem_with_solution,
                          brain_progression.GAMES_QUESTION)
 
 

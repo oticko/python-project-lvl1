@@ -3,7 +3,7 @@ from brain_games.games import brain_prime
 
 
 def main():
-    games_engine.handler(brain_prime.make_problem_with_solve,
+    games_engine.play_game(brain_prime.make_problem_with_solution,
                          brain_prime.GAMES_QUESTION)
 
 
