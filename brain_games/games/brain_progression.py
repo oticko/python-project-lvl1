@@ -15,7 +15,7 @@ def make_progression(len, first_numb, step):
     return progression
 
 
-def make_progression_with_dots(progression):
+def add_dots_to_progression(progression):
     missing_number_index = random.randint(0, len(progression) - 1)
     missing_number = progression[missing_number_index]
     modified_progression = progression
@@ -31,6 +31,6 @@ def make_problem_with_solution():
                                        MAX_PROGRESSION_STEP))
     progression = make_progression(progression_len,
                                    progression_number, progression_step)
-    modified_progression, missing_number = make_progression_with_dots(progression)
+    modified_progression, missing_number = add_dots_to_progression(progression)
     problem = ' '.join(map(str, modified_progression))
     return problem, missing_number
