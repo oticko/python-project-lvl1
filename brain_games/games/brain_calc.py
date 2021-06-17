@@ -13,7 +13,7 @@ def calc(first_numb, operation, second_numb):
     elif operation == '*':
         result = first_numb * second_numb
     else:
-        return 'Unknown operation'
+        return 'Error'
     return result
 
 
