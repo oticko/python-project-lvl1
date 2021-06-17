@@ -10,9 +10,9 @@ def welcome_speech(games_question):
     return name
 
 
-def handler(game, games_question):
+def play_game(game, games_question):
     name = welcome_speech(games_question)
-    for current_round in range(0, NUMBER_OF_ROUNDS):
+    for _ in range(NUMBER_OF_ROUNDS):
         problem, correct_answer = game()
         correct_answer = str(correct_answer)
         print('Question:', problem)
